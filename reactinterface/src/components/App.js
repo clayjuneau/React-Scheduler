@@ -14,20 +14,15 @@ function App(){
       .then(setAppointments)
   }, []);
 
-  // if(appointments){
-  //   return <div>{JSON.stringify(appointments)}</div>
-  // }
-
   return (
     <main className="page bg-white" id="petratings">
       <div className="container">
         <div className="row">
           <div className="col-md-12 bg-white">
             <div className="container">
-              {appointments[5].petName}
               <AddAppointments />
               <SearchAppointments />
-              <ListAppointments />
+              <ListAppointments appointments={appointments}/>
             </div>
           </div>
         </div>
