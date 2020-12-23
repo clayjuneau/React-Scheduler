@@ -4,6 +4,8 @@ import AddAppointments from './AddAppointments';
 import SearchAppointments from './SearchAppointments';
 import ListAppointments from './ListAppointments';
 
+import {without} from 'lodash';
+
 function App(){
 
   const [appointments, setAppointments] = useState([])
@@ -14,6 +16,13 @@ function App(){
       .then(setAppointments)
   }, []);
 
+  function deleteAppointment(apt) {
+    let tempApts = appointments
+    //using lodash method
+    tempApts = without(tempApts, apt)
+    setAppointments(tempApts)
+  }
+
   return (
     <main className="page bg-white" id="petratings">
       <div className="container">
@@ -22,7 +31,7 @@ function App(){
             <div className="container">
               <AddAppointments />
               <SearchAppointments />
-              <ListAppointments appointments={appointments}/>
+              <ListAppointments appointments={appointments} deleteAppointment={deleteAppointment}/>
             </div>
           </div>
         </div>
