@@ -28,7 +28,7 @@ function AddAppointments({formDisplay, toggleForm, addAppointment}){
         setAptTime('')
         setAptNotes('')
 
-        console.log("added apt" + tempApt)
+        // console.log("added apt" + tempApt)
 
         //hide form
         toggleForm()

@@ -10,6 +10,9 @@ function App(){
 
   const [appointments, setAppointments] = useState([])
   const [formDisplay, setFormDisplay] = useState(false)
+  const [orderBy, setOrderBy] = useState('petName')
+  const [orderDir, setOrderDir] = useState('asc')
+  const [queryText, setQueryText] = useState('')
 
   useEffect(() => {
     fetch('./data.json')
@@ -28,11 +31,42 @@ function App(){
     setFormDisplay(!formDisplay)
   }
 
+  function searchApts(query) {
+    setQueryText(query)
+  }
+
+  function changeOrder(order, dir) {
+    setOrderBy(order)
+    setOrderDir(dir)
+  }
+
   function addAppointment(apt) {
     let tempApts = appointments
     tempApts.unshift(apt)
     setAppointments(tempApts)
   }
+
+  let order;
+  let filteredApts = appointments;
+  if(orderDir === 'asc'){
+    order = 1
+  } else {
+    order = -1
+  }
+
+  filteredApts = filteredApts.sort((a,b) => {
+    if(a[orderBy].toLowerCase() < b[orderBy].toLowerCase()){
+      return -1 * order
+    } else {
+      return 1 * order
+    }
+  }).filter(eachItem => {
+    return(
+      eachItem['petName'].toLowerCase().includes(queryText.toLowerCase()) ||
+      eachItem['ownerName'].toLowerCase().includes(queryText.toLowerCase()) ||
+      eachItem['aptNotes'].toLowerCase().includes(queryText.toLowerCase())
+    )
+  })
 
   return (
     <main className="page bg-white" id="petratings">
@@ -45,9 +79,14 @@ function App(){
                 toggleForm={toggleForm}
                 addAppointment={addAppointment}
               />
-              <SearchAppointments />
+              <SearchAppointments 
+                orderBy={orderBy}
+                orderDir={orderDir}
+                changeOrder={changeOrder}
+                searchApts={searchApts}
+              />
               <ListAppointments 
-                appointments={appointments} 
+                appointments={filteredApts} 
                 deleteAppointment={deleteAppointment}
               />
             </div>
