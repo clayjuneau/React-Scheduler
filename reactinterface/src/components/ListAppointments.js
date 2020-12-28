@@ -19,7 +19,7 @@ function ListAppointments({appointments, deleteAppointment}){
                 <div className="pet-head d-flex">
                     <span className="pet-name">{item.petName}</span>
                     <span className="apt-date ml-auto">
-                        <Moment date={item.aptDate} parse="YYYY-MM-dd hh:mm" format="MMM D - h:mma"/>
+                        <Moment date={item.aptDate} parse="YYYY-MM-dd hh:mm" format="MMM. d - h:mma"/>
                     </span>
                 </div>
 
