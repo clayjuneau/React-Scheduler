@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React-Scheduler/static/css/main.31e503f9.chunk.css",
+    "main.js": "/React-Scheduler/static/js/main.e3477d66.chunk.js",
+    "main.js.map": "/React-Scheduler/static/js/main.e3477d66.chunk.js.map",
+    "runtime-main.js": "/React-Scheduler/static/js/runtime-main.3960693c.js",
+    "runtime-main.js.map": "/React-Scheduler/static/js/runtime-main.3960693c.js.map",
+    "static/css/2.95f25948.chunk.css": "/React-Scheduler/static/css/2.95f25948.chunk.css",
+    "static/js/2.8a58d8ba.chunk.js": "/React-Scheduler/static/js/2.8a58d8ba.chunk.js",
+    "static/js/2.8a58d8ba.chunk.js.map": "/React-Scheduler/static/js/2.8a58d8ba.chunk.js.map",
+    "static/js/3.955e5735.chunk.js": "/React-Scheduler/static/js/3.955e5735.chunk.js",
+    "static/js/3.955e5735.chunk.js.map": "/React-Scheduler/static/js/3.955e5735.chunk.js.map",
+    "index.html": "/React-Scheduler/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/React-Scheduler/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.31e503f9.chunk.css.map": "/React-Scheduler/static/css/main.31e503f9.chunk.css.map",
+    "static/js/2.8a58d8ba.chunk.js.LICENSE.txt": "/React-Scheduler/static/js/2.8a58d8ba.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3960693c.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.8a58d8ba.chunk.js",
+    "static/css/main.31e503f9.chunk.css",
+    "static/js/main.e3477d66.chunk.js"
+  ]
+}
